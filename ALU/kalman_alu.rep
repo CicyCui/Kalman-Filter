@@ -1,0 +1,1059 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : kalman_alu
+Version: G-2012.06
+Date   : Sat Apr 26 17:00:47 2014
+****************************************
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+  Startpoint: P11_in_reg[0]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: bias_in_reg[15]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  P11_in_reg[0]/CLK (DFFSR)                               0.00       0.00 r
+  P11_in_reg[0]/Q (DFFSR)                                 0.69       0.69 f
+  dut2/P11_in[0] (kalman_alu2_2)                          0.00       0.69 f
+  dut2/r369/a[0] (kalman_alu2_2_DW_mult_uns_6)            0.00       0.69 f
+  dut2/r369/U490/Y (BUFX2)                                0.62       1.31 f
+  dut2/r369/U387/Y (XNOR2X1)                              0.22       1.53 r
+  dut2/r369/U364/Y (OAI22X1)                              0.11       1.64 f
+  dut2/r369/U432/Y (AND2X2)                               0.30       1.94 f
+  dut2/r369/U56/YC (FAX1)                                 0.42       2.36 f
+  dut2/r369/U55/YC (FAX1)                                 0.46       2.81 f
+  dut2/r369/U54/YC (FAX1)                                 0.46       3.27 f
+  dut2/r369/U53/YC (FAX1)                                 0.46       3.72 f
+  dut2/r369/U52/YC (FAX1)                                 0.46       4.18 f
+  dut2/r369/U51/YC (FAX1)                                 0.46       4.63 f
+  dut2/r369/U50/YC (FAX1)                                 0.46       5.09 f
+  dut2/r369/U49/YC (FAX1)                                 0.46       5.54 f
+  dut2/r369/U48/YC (FAX1)                                 0.46       6.00 f
+  dut2/r369/U47/YC (FAX1)                                 0.46       6.45 f
+  dut2/r369/U46/YC (FAX1)                                 0.46       6.91 f
+  dut2/r369/U45/YC (FAX1)                                 0.46       7.36 f
+  dut2/r369/U44/YC (FAX1)                                 0.46       7.82 f
+  dut2/r369/U43/YC (FAX1)                                 0.46       8.28 f
+  dut2/r369/U42/YC (FAX1)                                 0.46       8.73 f
+  dut2/r369/U41/YC (FAX1)                                 0.46       9.19 f
+  dut2/r369/U40/YC (FAX1)                                 0.46       9.64 f
+  dut2/r369/U39/YC (FAX1)                                 0.46      10.10 f
+  dut2/r369/U38/YC (FAX1)                                 0.46      10.55 f
+  dut2/r369/U37/YC (FAX1)                                 0.46      11.01 f
+  dut2/r369/U36/YC (FAX1)                                 0.46      11.46 f
+  dut2/r369/U35/YC (FAX1)                                 0.46      11.92 f
+  dut2/r369/U34/YC (FAX1)                                 0.46      12.37 f
+  dut2/r369/U33/YC (FAX1)                                 0.46      12.83 f
+  dut2/r369/U32/YC (FAX1)                                 0.46      13.28 f
+  dut2/r369/U31/YC (FAX1)                                 0.46      13.74 f
+  dut2/r369/U30/YC (FAX1)                                 0.46      14.19 f
+  dut2/r369/U29/YS (FAX1)                                 1.27      15.46 f
+  dut2/r369/product[29] (kalman_alu2_2_DW_mult_uns_6)     0.00      15.46 f
+  dut2/gt_35/A[21] (kalman_alu2_2_DW_cmp_5)               0.00      15.46 f
+  dut2/gt_35/U118/Y (OR2X2)                               0.32      15.78 f
+  dut2/gt_35/U10/Y (NAND2X1)                              0.19      15.97 r
+  dut2/gt_35/U8/Y (NOR2X1)                                0.18      16.15 f
+  dut2/gt_35/U2/Y (NAND2X1)                               0.13      16.28 r
+  dut2/gt_35/U1/Y (OAI21X1)                               0.65      16.93 f
+  dut2/gt_35/GE_LT_GT_LE (kalman_alu2_2_DW_cmp_5)         0.00      16.93 f
+  dut2/U11/Y (INVX2)                                      0.19      17.12 r
+  dut2/U9/Y (INVX2)                                       0.53      17.65 f
+  dut2/U206/Y (MUX2X1)                                    0.31      17.96 r
+  dut2/U207/Y (INVX2)                                     0.25      18.21 f
+  dut2/gt_36/A[14] (kalman_alu2_2_DW_cmp_4)               0.00      18.21 f
+  dut2/gt_36/U43/Y (NOR2X1)                               0.12      18.33 r
+  dut2/gt_36/U39/Y (NOR2X1)                               0.20      18.53 f
+  dut2/gt_36/U37/Y (NAND2X1)                              0.22      18.75 r
+  dut2/gt_36/U35/Y (NOR2X1)                               0.20      18.96 f
+  dut2/gt_36/U34/Y (AOI21X1)                              0.13      19.09 r
+  dut2/gt_36/U1/Y (OAI21X1)                               0.66      19.75 f
+  dut2/gt_36/GE_LT_GT_LE (kalman_alu2_2_DW_cmp_4)         0.00      19.75 f
+  dut2/U12/Y (INVX2)                                      0.19      19.95 r
+  dut2/U10/Y (INVX2)                                      0.53      20.48 f
+  dut2/U280/Y (MUX2X1)                                    0.33      20.81 f
+  dut2/U281/Y (INVX2)                                     0.42      21.22 r
+  dut2/mult_37/b[0] (kalman_alu2_2_DW_mult_uns_5)         0.00      21.22 r
+  dut2/mult_37/U388/Y (OR2X1)                             0.28      21.50 r
+  dut2/mult_37/U339/Y (OAI22X1)                           0.11      21.61 f
+  dut2/mult_37/U432/Y (AND2X2)                            0.28      21.89 f
+  dut2/mult_37/U56/YC (FAX1)                              0.42      22.30 f
+  dut2/mult_37/U55/YC (FAX1)                              0.46      22.76 f
+  dut2/mult_37/U54/YC (FAX1)                              0.46      23.21 f
+  dut2/mult_37/U53/YC (FAX1)                              0.46      23.67 f
+  dut2/mult_37/U52/YC (FAX1)                              0.46      24.12 f
+  dut2/mult_37/U51/YC (FAX1)                              0.46      24.58 f
+  dut2/mult_37/U50/YC (FAX1)                              0.46      25.03 f
+  dut2/mult_37/U49/YS (FAX1)                              0.53      25.57 f
+  dut2/mult_37/product[9] (kalman_alu2_2_DW_mult_uns_5)
+                                                          0.00      25.57 f
+  dut2/add_42/A[1] (kalman_alu2_2_DW01_add_6)             0.00      25.57 f
+  dut2/add_42/U23/YC (FAX1)                               0.53      26.09 f
+  dut2/add_42/U22/YC (FAX1)                               0.48      26.57 f
+  dut2/add_42/U21/YC (FAX1)                               0.46      27.03 f
+  dut2/add_42/U20/YC (FAX1)                               0.46      27.48 f
+  dut2/add_42/U19/YC (FAX1)                               0.46      27.94 f
+  dut2/add_42/U18/YC (FAX1)                               0.46      28.39 f
+  dut2/add_42/U17/YC (FAX1)                               0.46      28.85 f
+  dut2/add_42/U16/YC (FAX1)                               0.46      29.30 f
+  dut2/add_42/U15/YC (FAX1)                               0.46      29.76 f
+  dut2/add_42/U14/YC (FAX1)                               0.46      30.21 f
+  dut2/add_42/U13/YC (FAX1)                               0.46      30.67 f
+  dut2/add_42/U12/YC (FAX1)                               0.46      31.12 f
+  dut2/add_42/U11/YC (FAX1)                               0.46      31.58 f
+  dut2/add_42/U10/YC (FAX1)                               0.46      32.03 f
+  dut2/add_42/U9/YC (FAX1)                                0.46      32.49 f
+  dut2/add_42/U8/YC (FAX1)                                0.46      32.94 f
+  dut2/add_42/U7/YC (FAX1)                                0.46      33.40 f
+  dut2/add_42/U6/YC (FAX1)                                0.46      33.85 f
+  dut2/add_42/U5/YC (FAX1)                                0.46      34.31 f
+  dut2/add_42/U4/YC (FAX1)                                0.46      34.76 f
+  dut2/add_42/U3/YS (FAX1)                                1.20      35.96 f
+  dut2/add_42/SUM[21] (kalman_alu2_2_DW01_add_6)          0.00      35.96 f
+  dut2/P00_out[21] (kalman_alu2_2)                        0.00      35.96 f
+  dut4/P00_out[21] (kalman_alu4_2)                        0.00      35.96 f
+  dut4/add_15/A[21] (kalman_alu4_2_DW01_add_2)            0.00      35.96 f
+  dut4/add_15/U2/YC (HAX1)                                0.65      36.61 f
+  dut4/add_15/U1/Y (XOR2X1)                               0.41      37.02 r
+  dut4/add_15/SUM[22] (kalman_alu4_2_DW01_add_2)          0.00      37.02 r
+  dut4/S_out[22] (kalman_alu4_2)                          0.00      37.02 r
+  dut5/S_out[22] (kalman_alu5_2)                          0.00      37.02 r
+  dut5/div_17/b[22] (kalman_alu5_2_DW_div_uns_11)         0.00      37.02 r
+  dut5/div_17/U740/Y (OR2X2)                              0.35      37.38 r
+  dut5/div_17/U735/Y (OR2X2)                              0.24      37.62 r
+  dut5/div_17/U733/Y (OR2X2)                              0.32      37.93 r
+  dut5/div_17/U728/Y (OR2X2)                              0.24      38.17 r
+  dut5/div_17/U726/Y (OR2X2)                              0.32      38.49 r
+  dut5/div_17/U721/Y (OR2X2)                              0.24      38.73 r
+  dut5/div_17/U719/Y (OR2X2)                              0.32      39.05 r
+  dut5/div_17/U714/Y (OR2X2)                              0.24      39.29 r
+  dut5/div_17/U711/Y (OR2X2)                              0.32      39.60 r
+  dut5/div_17/U705/Y (OR2X2)                              0.24      39.84 r
+  dut5/div_17/U702/Y (OR2X2)                              0.32      40.16 r
+  dut5/div_17/U696/Y (OR2X2)                              0.24      40.39 r
+  dut5/div_17/U694/Y (OR2X2)                              0.31      40.71 r
+  dut5/div_17/U687/Y (NOR2X1)                             0.20      40.91 f
+  dut5/div_17/u_div/u_mx_PartRem_0_35_0/Y (MUX2X1)        0.24      41.15 r
+  dut5/div_17/U274/Y (INVX2)                              0.14      41.29 f
+  dut5/div_17/u_div/u_add_PartRem_1_34/U6/Y (NOR2X1)      0.17      41.46 r
+  dut5/div_17/u_div/u_add_PartRem_1_34/U3/Y (OAI21X1)     0.14      41.60 f
+  dut5/div_17/U692/Y (INVX2)                              0.10      41.70 r
+  dut5/div_17/U691/Y (NOR3X1)                             0.36      42.06 f
+  dut5/div_17/u_div/u_mx_PartRem_0_34_0/Y (MUX2X1)        0.29      42.35 f
+  dut5/div_17/U276/Y (INVX2)                              0.15      42.50 r
+  dut5/div_17/u_div/u_add_PartRem_1_33/U14/Y (NOR2X1)     0.23      42.73 f
+  dut5/div_17/u_div/u_add_PartRem_1_33/U11/Y (OAI21X1)
+                                                          0.28      43.00 r
+  dut5/div_17/u_div/u_add_PartRem_1_33/U3/Y (AOI21X1)     0.16      43.16 f
+  dut5/div_17/U693/Y (NOR2X1)                             0.25      43.41 r
+  dut5/div_17/u_div/u_mx_PartRem_0_33_0/Y (MUX2X1)        0.26      43.67 r
+  dut5/div_17/U279/Y (INVX2)                              0.14      43.82 f
+  dut5/div_17/u_div/u_add_PartRem_1_32/U22/Y (NOR2X1)     0.17      43.99 r
+  dut5/div_17/u_div/u_add_PartRem_1_32/U19/Y (OAI21X1)
+                                                          0.27      44.26 f
+  dut5/div_17/u_div/u_add_PartRem_1_32/U3/Y (AOI21X1)     0.16      44.42 r
+  dut5/div_17/U695/Y (NOR2X1)                             0.41      44.83 f
+  dut5/div_17/u_div/u_mx_PartRem_0_32_2/Y (MUX2X1)        0.29      45.13 r
+  dut5/div_17/U281/Y (INVX2)                              0.13      45.26 f
+  dut5/div_17/u_div/u_add_PartRem_1_31/U14/Y (NOR2X1)     0.21      45.47 r
+  dut5/div_17/u_div/u_add_PartRem_1_31/U10/Y (NOR2X1)     0.26      45.74 f
+  dut5/div_17/u_div/u_add_PartRem_1_31/U9/Y (AOI21X1)     0.23      45.96 r
+  dut5/div_17/u_div/u_add_PartRem_1_31/U3/Y (OAI21X1)     0.13      46.10 f
+  dut5/div_17/U699/Y (INVX2)                              0.10      46.19 r
+  dut5/div_17/U698/Y (NOR3X1)                             0.61      46.80 f
+  dut5/div_17/u_div/u_mx_PartRem_0_31_2/Y (MUX2X1)        0.32      47.12 r
+  dut5/div_17/U286/Y (INVX2)                              0.13      47.26 f
+  dut5/div_17/u_div/u_add_PartRem_1_30/A[2] (kalman_alu5_2_DW01_add_339)
+                                                          0.00      47.26 f
+  dut5/div_17/u_div/u_add_PartRem_1_30/U24/Y (NOR2X1)     0.21      47.47 r
+  dut5/div_17/u_div/u_add_PartRem_1_30/U20/Y (NOR2X1)     0.26      47.73 f
+  dut5/div_17/u_div/u_add_PartRem_1_30/U19/Y (AOI21X1)
+                                                          0.28      48.01 r
+  dut5/div_17/u_div/u_add_PartRem_1_30/U3/Y (OAI21X1)     0.14      48.15 f
+  dut5/div_17/u_div/u_add_PartRem_1_30/CO (kalman_alu5_2_DW01_add_339)
+                                                          0.00      48.15 f
+  dut5/div_17/U701/Y (INVX2)                              0.09      48.24 r
+  dut5/div_17/U700/Y (NOR2X1)                             0.56      48.80 f
+  dut5/div_17/u_div/u_mx_PartRem_0_30_2/Y (MUX2X1)        0.32      49.12 r
+  dut5/div_17/U292/Y (INVX2)                              0.13      49.25 f
+  dut5/div_17/u_div/u_add_PartRem_1_29/A[2] (kalman_alu5_2_DW01_add_340)
+                                                          0.00      49.25 f
+  dut5/div_17/u_div/u_add_PartRem_1_29/U34/Y (NOR2X1)     0.21      49.46 r
+  dut5/div_17/u_div/u_add_PartRem_1_29/U30/Y (NOR2X1)     0.26      49.73 f
+  dut5/div_17/u_div/u_add_PartRem_1_29/U29/Y (AOI21X1)
+                                                          0.33      50.06 r
+  dut5/div_17/u_div/u_add_PartRem_1_29/U3/Y (OAI21X1)     0.14      50.20 f
+  dut5/div_17/u_div/u_add_PartRem_1_29/CO (kalman_alu5_2_DW01_add_340)
+                                                          0.00      50.20 f
+  dut5/div_17/U704/Y (INVX2)                              0.10      50.29 r
+  dut5/div_17/U703/Y (NOR2X1)                             0.64      50.94 f
+  dut5/div_17/u_div/u_mx_PartRem_0_29_2/Y (MUX2X1)        0.33      51.27 r
+  dut5/div_17/U321/Y (INVX2)                              0.13      51.40 f
+  dut5/div_17/u_div/u_add_PartRem_1_28/A[2] (kalman_alu5_2_DW01_add_341)
+                                                          0.00      51.40 f
+  dut5/div_17/u_div/u_add_PartRem_1_28/U45/Y (NOR2X1)     0.21      51.61 r
+  dut5/div_17/u_div/u_add_PartRem_1_28/U41/Y (NOR2X1)     0.26      51.88 f
+  dut5/div_17/u_div/u_add_PartRem_1_28/U40/Y (AOI21X1)
+                                                          0.11      51.98 r
+  dut5/div_17/u_div/u_add_PartRem_1_28/U65/Y (BUFX2)      0.32      52.31 r
+  dut5/div_17/u_div/u_add_PartRem_1_28/U4/Y (OAI21X1)     0.10      52.41 f
+  dut5/div_17/u_div/u_add_PartRem_1_28/CO (kalman_alu5_2_DW01_add_341)
+                                                          0.00      52.41 f
+  dut5/div_17/U708/Y (INVX2)                              0.09      52.50 r
+  dut5/div_17/U707/Y (NOR3X1)                             0.85      53.35 f
+  dut5/div_17/u_div/u_mx_PartRem_0_28_4/Y (MUX2X1)        0.35      53.71 r
+  dut5/div_17/U327/Y (INVX2)                              0.13      53.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_27/A[4] (kalman_alu5_2_DW01_add_342)
+                                                          0.00      53.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_27/U40/Y (NOR2X1)     0.21      54.05 r
+  dut5/div_17/u_div/u_add_PartRem_1_27/U36/Y (NOR2X1)     0.38      54.43 f
+  dut5/div_17/u_div/u_add_PartRem_1_27/U12/Y (NAND2X1)
+                                                          0.19      54.62 r
+  dut5/div_17/u_div/u_add_PartRem_1_27/U11/Y (OAI21X1)
+                                                          0.21      54.83 f
+  dut5/div_17/u_div/u_add_PartRem_1_27/U3/Y (AOI21X1)     0.14      54.97 r
+  dut5/div_17/u_div/u_add_PartRem_1_27/U89/Y (INVX2)      0.08      55.05 f
+  dut5/div_17/u_div/u_add_PartRem_1_27/CO (kalman_alu5_2_DW01_add_342)
+                                                          0.00      55.05 f
+  dut5/div_17/U710/Y (INVX2)                              0.07      55.11 r
+  dut5/div_17/U709/Y (NOR2X1)                             0.80      55.91 f
+  dut5/div_17/u_div/u_mx_PartRem_0_27_2/Y (MUX2X1)        0.39      56.30 f
+  dut5/div_17/U338/Y (INVX2)                              0.13      56.44 r
+  dut5/div_17/u_div/u_add_PartRem_1_26/A[2] (kalman_alu5_2_DW01_add_343)
+                                                          0.00      56.44 r
+  dut5/div_17/u_div/u_add_PartRem_1_26/U69/Y (NOR2X1)     0.29      56.72 f
+  dut5/div_17/u_div/u_add_PartRem_1_26/U66/Y (OAI21X1)
+                                                          0.19      56.91 r
+  dut5/div_17/u_div/u_add_PartRem_1_26/U64/Y (AOI21X1)
+                                                          0.25      57.16 f
+  dut5/div_17/u_div/u_add_PartRem_1_26/U23/Y (OAI21X1)
+                                                          0.31      57.47 r
+  dut5/div_17/u_div/u_add_PartRem_1_26/U3/Y (AOI21X1)     0.18      57.64 f
+  dut5/div_17/u_div/u_add_PartRem_1_26/U106/Y (INVX2)     0.10      57.74 r
+  dut5/div_17/u_div/u_add_PartRem_1_26/CO (kalman_alu5_2_DW01_add_343)
+                                                          0.00      57.74 r
+  dut5/div_17/U713/Y (INVX2)                              0.07      57.81 f
+  dut5/div_17/U712/Y (NOR2X1)                             0.07      57.88 r
+  dut5/div_17/U42/Y (BUFX2)                               0.47      58.35 r
+  dut5/div_17/u_div/u_mx_PartRem_0_26_4/Y (MUX2X1)        0.29      58.64 r
+  dut5/div_17/U345/Y (INVX2)                              0.13      58.77 f
+  dut5/div_17/u_div/u_add_PartRem_1_25/A[4] (kalman_alu5_2_DW01_add_344)
+                                                          0.00      58.77 f
+  dut5/div_17/u_div/u_add_PartRem_1_25/U60/Y (NOR2X1)     0.21      58.99 r
+  dut5/div_17/u_div/u_add_PartRem_1_25/U56/Y (NOR2X1)     0.38      59.37 f
+  dut5/div_17/u_div/u_add_PartRem_1_25/U32/Y (NAND2X1)
+                                                          0.19      59.56 r
+  dut5/div_17/u_div/u_add_PartRem_1_25/U31/Y (OAI21X1)
+                                                          0.30      59.86 f
+  dut5/div_17/u_div/u_add_PartRem_1_25/U96/Y (INVX2)      0.13      59.99 r
+  dut5/div_17/u_div/u_add_PartRem_1_25/U97/Y (OAI21X1)
+                                                          0.10      60.09 f
+  dut5/div_17/u_div/u_add_PartRem_1_25/CO (kalman_alu5_2_DW01_add_344)
+                                                          0.00      60.09 f
+  dut5/div_17/U717/Y (INVX2)                              0.09      60.18 r
+  dut5/div_17/U716/Y (NOR3X1)                             0.27      60.45 f
+  dut5/div_17/U742/Y (INVX2)                              0.11      60.56 r
+  dut5/div_17/U58/Y (INVX2)                               0.44      61.00 f
+  dut5/div_17/u_div/u_mx_PartRem_0_25_4/Y (MUX2X1)        0.30      61.30 r
+  dut5/div_17/U355/Y (INVX2)                              0.13      61.44 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/A[4] (kalman_alu5_2_DW01_add_345)
+                                                          0.00      61.44 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/U75/Y (NOR2X1)     0.21      61.65 r
+  dut5/div_17/u_div/u_add_PartRem_1_24/U71/Y (NOR2X1)     0.38      62.03 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/U47/Y (NAND2X1)
+                                                          0.19      62.22 r
+  dut5/div_17/u_div/u_add_PartRem_1_24/U46/Y (OAI21X1)
+                                                          0.10      62.32 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/U111/Y (BUFX2)     0.34      62.66 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/U110/Y (INVX2)     0.11      62.76 r
+  dut5/div_17/u_div/u_add_PartRem_1_24/U112/Y (OAI21X1)
+                                                          0.10      62.87 f
+  dut5/div_17/u_div/u_add_PartRem_1_24/CO (kalman_alu5_2_DW01_add_345)
+                                                          0.00      62.87 f
+  dut5/div_17/U718/Y (INVX2)                              0.08      62.95 r
+  dut5/div_17/U10/Y (OR2X2)                               0.25      63.20 r
+  dut5/div_17/U49/Y (INVX2)                               0.47      63.67 f
+  dut5/div_17/u_div/u_mx_PartRem_0_24_4/Y (MUX2X1)        0.31      63.97 r
+  dut5/div_17/U366/Y (INVX2)                              0.13      64.11 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/A[4] (kalman_alu5_2_DW01_add_346)
+                                                          0.00      64.11 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/U85/Y (NOR2X1)     0.21      64.32 r
+  dut5/div_17/u_div/u_add_PartRem_1_23/U81/Y (NOR2X1)     0.38      64.70 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/U57/Y (NAND2X1)
+                                                          0.19      64.89 r
+  dut5/div_17/u_div/u_add_PartRem_1_23/U56/Y (OAI21X1)
+                                                          0.10      64.99 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/U120/Y (BUFX2)     0.37      65.36 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/U4/Y (AOI21X1)     0.17      65.52 r
+  dut5/div_17/u_div/u_add_PartRem_1_23/U128/Y (INVX2)     0.09      65.61 f
+  dut5/div_17/u_div/u_add_PartRem_1_23/CO (kalman_alu5_2_DW01_add_346)
+                                                          0.00      65.61 f
+  dut5/div_17/U720/Y (INVX2)                              0.07      65.68 r
+  dut5/div_17/U9/Y (OR2X2)                                0.25      65.92 r
+  dut5/div_17/U47/Y (INVX2)                               0.51      66.43 f
+  dut5/div_17/u_div/u_mx_PartRem_0_23_4/Y (MUX2X1)        0.31      66.74 r
+  dut5/div_17/U378/Y (INVX2)                              0.13      66.87 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/A[4] (kalman_alu5_2_DW01_add_347)
+                                                          0.00      66.87 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/U97/Y (NOR2X1)     0.21      67.09 r
+  dut5/div_17/u_div/u_add_PartRem_1_22/U93/Y (NOR2X1)     0.38      67.47 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/U69/Y (NAND2X1)
+                                                          0.19      67.66 r
+  dut5/div_17/u_div/u_add_PartRem_1_22/U68/Y (OAI21X1)
+                                                          0.10      67.76 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/U132/Y (BUFX2)     0.40      68.16 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/U4/Y (AOI21X1)     0.17      68.33 r
+  dut5/div_17/u_div/u_add_PartRem_1_22/U133/Y (INVX2)     0.09      68.42 f
+  dut5/div_17/u_div/u_add_PartRem_1_22/CO (kalman_alu5_2_DW01_add_347)
+                                                          0.00      68.42 f
+  dut5/div_17/U724/Y (INVX2)                              0.08      68.49 r
+  dut5/div_17/U723/Y (NOR3X1)                             0.26      68.75 f
+  dut5/div_17/U743/Y (INVX2)                              0.11      68.87 r
+  dut5/div_17/U57/Y (INVX2)                               0.55      69.42 f
+  dut5/div_17/u_div/u_mx_PartRem_0_22_4/Y (MUX2X1)        0.32      69.73 r
+  dut5/div_17/U391/Y (INVX2)                              0.13      69.87 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/A[4] (kalman_alu5_2_DW01_add_348)
+                                                          0.00      69.87 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/U109/Y (NOR2X1)
+                                                          0.21      70.08 r
+  dut5/div_17/u_div/u_add_PartRem_1_21/U105/Y (NOR2X1)
+                                                          0.38      70.46 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/U81/Y (NAND2X1)
+                                                          0.19      70.65 r
+  dut5/div_17/u_div/u_add_PartRem_1_21/U80/Y (OAI21X1)
+                                                          0.10      70.75 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/U145/Y (BUFX2)     0.43      71.18 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/U4/Y (AOI21X1)     0.18      71.36 r
+  dut5/div_17/u_div/u_add_PartRem_1_21/U146/Y (INVX2)     0.09      71.45 f
+  dut5/div_17/u_div/u_add_PartRem_1_21/CO (kalman_alu5_2_DW01_add_348)
+                                                          0.00      71.45 f
+  dut5/div_17/U725/Y (INVX2)                              0.07      71.51 r
+  dut5/div_17/U8/Y (OR2X2)                                0.25      71.76 r
+  dut5/div_17/U46/Y (INVX2)                               0.58      72.34 f
+  dut5/div_17/u_div/u_mx_PartRem_0_21_4/Y (MUX2X1)        0.32      72.66 r
+  dut5/div_17/U405/Y (INVX2)                              0.13      72.79 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/A[4] (kalman_alu5_2_DW01_add_349)
+                                                          0.00      72.79 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/U123/Y (NOR2X1)
+                                                          0.21      73.01 r
+  dut5/div_17/u_div/u_add_PartRem_1_20/U119/Y (NOR2X1)
+                                                          0.38      73.39 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/U95/Y (NAND2X1)
+                                                          0.19      73.58 r
+  dut5/div_17/u_div/u_add_PartRem_1_20/U94/Y (OAI21X1)
+                                                          0.10      73.68 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/U158/Y (BUFX2)     0.46      74.14 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/U6/Y (AOI21X1)     0.18      74.33 r
+  dut5/div_17/u_div/u_add_PartRem_1_20/U160/Y (INVX2)     0.09      74.41 f
+  dut5/div_17/u_div/u_add_PartRem_1_20/CO (kalman_alu5_2_DW01_add_349)
+                                                          0.00      74.41 f
+  dut5/div_17/U727/Y (INVX2)                              0.07      74.48 r
+  dut5/div_17/U7/Y (OR2X2)                                0.25      74.73 r
+  dut5/div_17/U45/Y (INVX2)                               0.61      75.34 f
+  dut5/div_17/u_div/u_mx_PartRem_0_20_12/Y (MUX2X1)       0.33      75.67 r
+  dut5/div_17/U428/Y (INVX2)                              0.13      75.80 f
+  dut5/div_17/u_div/u_add_PartRem_1_19/A[12] (kalman_alu5_2_DW01_add_350)
+                                                          0.00      75.80 f
+  dut5/div_17/u_div/u_add_PartRem_1_19/U44/Y (NOR2X1)     0.21      76.01 r
+  dut5/div_17/u_div/u_add_PartRem_1_19/U40/Y (NOR2X1)     0.41      76.43 f
+  dut5/div_17/u_div/u_add_PartRem_1_19/U12/Y (NAND2X1)
+                                                          0.26      76.69 r
+  dut5/div_17/u_div/u_add_PartRem_1_19/U10/Y (NOR2X1)     0.21      76.89 f
+  dut5/div_17/u_div/u_add_PartRem_1_19/U9/Y (AOI21X1)     0.22      77.11 r
+  dut5/div_17/u_div/u_add_PartRem_1_19/U3/Y (OAI21X1)     0.13      77.25 f
+  dut5/div_17/u_div/u_add_PartRem_1_19/CO (kalman_alu5_2_DW01_add_350)
+                                                          0.00      77.25 f
+  dut5/div_17/U731/Y (INVX2)                              0.10      77.34 r
+  dut5/div_17/U730/Y (NOR3X1)                             0.27      77.61 f
+  dut5/div_17/U744/Y (INVX2)                              0.11      77.72 r
+  dut5/div_17/U56/Y (INVX2)                               0.65      78.37 f
+  dut5/div_17/u_div/u_mx_PartRem_0_19_12/Y (MUX2X1)       0.33      78.71 r
+  dut5/div_17/U467/Y (INVX2)                              0.13      78.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_18/A[12] (kalman_alu5_2_DW01_add_351)
+                                                          0.00      78.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_18/U54/Y (NOR2X1)     0.21      79.05 r
+  dut5/div_17/u_div/u_add_PartRem_1_18/U50/Y (NOR2X1)     0.41      79.46 f
+  dut5/div_17/u_div/u_add_PartRem_1_18/U22/Y (NAND2X1)
+                                                          0.26      79.72 r
+  dut5/div_17/u_div/u_add_PartRem_1_18/U20/Y (NOR2X1)     0.21      79.93 f
+  dut5/div_17/u_div/u_add_PartRem_1_18/U19/Y (AOI21X1)
+                                                          0.27      80.20 r
+  dut5/div_17/u_div/u_add_PartRem_1_18/U3/Y (OAI21X1)     0.14      80.34 f
+  dut5/div_17/u_div/u_add_PartRem_1_18/CO (kalman_alu5_2_DW01_add_351)
+                                                          0.00      80.34 f
+  dut5/div_17/U732/Y (INVX2)                              0.09      80.43 r
+  dut5/div_17/U6/Y (OR2X2)                                0.25      80.68 r
+  dut5/div_17/U44/Y (INVX2)                               0.69      81.37 f
+  dut5/div_17/u_div/u_mx_PartRem_0_18_12/Y (MUX2X1)       0.34      81.71 r
+  dut5/div_17/U485/Y (INVX2)                              0.13      81.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_17/A[12] (kalman_alu5_2_DW01_add_352)
+                                                          0.00      81.84 f
+  dut5/div_17/u_div/u_add_PartRem_1_17/U68/Y (NOR2X1)     0.21      82.05 r
+  dut5/div_17/u_div/u_add_PartRem_1_17/U64/Y (NOR2X1)     0.41      82.46 f
+  dut5/div_17/u_div/u_add_PartRem_1_17/U36/Y (NAND2X1)
+                                                          0.26      82.72 r
+  dut5/div_17/u_div/u_add_PartRem_1_17/U34/Y (NOR2X1)     0.21      82.93 f
+  dut5/div_17/u_div/u_add_PartRem_1_17/U33/Y (AOI21X1)
+                                                          0.32      83.26 r
+  dut5/div_17/u_div/u_add_PartRem_1_17/U3/Y (OAI21X1)     0.14      83.39 f
+  dut5/div_17/u_div/u_add_PartRem_1_17/CO (kalman_alu5_2_DW01_add_352)
+                                                          0.00      83.39 f
+  dut5/div_17/U734/Y (INVX2)                              0.10      83.49 r
+  dut5/div_17/U2/Y (OR2X2)                                0.25      83.74 r
+  dut5/div_17/U43/Y (INVX2)                               0.72      84.46 f
+  dut5/div_17/u_div/u_mx_PartRem_0_17_12/Y (MUX2X1)       0.34      84.81 r
+  dut5/div_17/U504/Y (INVX2)                              0.13      84.94 f
+  dut5/div_17/u_div/u_add_PartRem_1_16/A[12] (kalman_alu5_2_DW01_add_353)
+                                                          0.00      84.94 f
+  dut5/div_17/u_div/u_add_PartRem_1_16/U75/Y (NOR2X1)     0.21      85.15 r
+  dut5/div_17/u_div/u_add_PartRem_1_16/U71/Y (NOR2X1)     0.41      85.56 f
+  dut5/div_17/u_div/u_add_PartRem_1_16/U43/Y (NAND2X1)
+                                                          0.26      85.82 r
+  dut5/div_17/u_div/u_add_PartRem_1_16/U41/Y (NOR2X1)     0.21      86.03 f
+  dut5/div_17/u_div/u_add_PartRem_1_16/U40/Y (AOI21X1)
+                                                          0.10      86.13 r
+  dut5/div_17/u_div/u_add_PartRem_1_16/U193/Y (BUFX2)     0.32      86.45 r
+  dut5/div_17/u_div/u_add_PartRem_1_16/U4/Y (OAI21X1)     0.13      86.59 f
+  dut5/div_17/u_div/u_add_PartRem_1_16/CO (kalman_alu5_2_DW01_add_353)
+                                                          0.00      86.59 f
+  dut5/div_17/U738/Y (INVX2)                              0.10      86.68 r
+  dut5/div_17/U737/Y (NOR3X1)                             0.27      86.95 f
+  dut5/div_17/U745/Y (INVX2)                              0.11      87.06 r
+  dut5/div_17/U55/Y (INVX2)                               0.76      87.82 f
+  dut5/div_17/u_div/u_mx_PartRem_0_16_12/Y (MUX2X1)       0.35      88.17 r
+  dut5/div_17/U524/Y (INVX2)                              0.13      88.30 f
+  dut5/div_17/u_div/u_add_PartRem_1_15/A[12] (kalman_alu5_2_DW01_add_354)
+                                                          0.00      88.30 f
+  dut5/div_17/u_div/u_add_PartRem_1_15/U89/Y (NOR2X1)     0.21      88.51 r
+  dut5/div_17/u_div/u_add_PartRem_1_15/U85/Y (NOR2X1)     0.41      88.92 f
+  dut5/div_17/u_div/u_add_PartRem_1_15/U57/Y (NAND2X1)
+                                                          0.26      89.19 r
+  dut5/div_17/u_div/u_add_PartRem_1_15/U55/Y (NOR2X1)     0.21      89.39 f
+  dut5/div_17/u_div/u_add_PartRem_1_15/U54/Y (AOI21X1)
+                                                          0.10      89.50 r
+  dut5/div_17/u_div/u_add_PartRem_1_15/U207/Y (BUFX2)     0.35      89.84 r
+  dut5/div_17/u_div/u_add_PartRem_1_15/U4/Y (OAI21X1)     0.13      89.98 f
+  dut5/div_17/u_div/u_add_PartRem_1_15/CO (kalman_alu5_2_DW01_add_354)
+                                                          0.00      89.98 f
+  dut5/div_17/U739/Y (INVX2)                              0.09      90.07 r
+  dut5/div_17/U1/Y (OR2X2)                                0.25      90.32 r
+  dut5/div_17/U48/Y (INVX2)                               0.79      91.11 f
+  dut5/div_17/u_div/u_mx_PartRem_0_15_12/Y (MUX2X1)       0.35      91.46 r
+  dut5/div_17/U545/Y (INVX2)                              0.13      91.60 f
+  dut5/div_17/u_div/u_add_PartRem_1_14/A[12] (kalman_alu5_2_DW01_add_355)
+                                                          0.00      91.60 f
+  dut5/div_17/u_div/u_add_PartRem_1_14/U109/Y (NOR2X1)
+                                                          0.21      91.81 r
+  dut5/div_17/u_div/u_add_PartRem_1_14/U105/Y (NOR2X1)
+                                                          0.41      92.22 f
+  dut5/div_17/u_div/u_add_PartRem_1_14/U77/Y (NAND2X1)
+                                                          0.26      92.48 r
+  dut5/div_17/u_div/u_add_PartRem_1_14/U75/Y (NOR2X1)     0.21      92.69 f
+  dut5/div_17/u_div/u_add_PartRem_1_14/U74/Y (AOI21X1)
+                                                          0.10      92.79 r
+  dut5/div_17/u_div/u_add_PartRem_1_14/U230/Y (BUFX2)     0.38      93.17 r
+  dut5/div_17/u_div/u_add_PartRem_1_14/U4/Y (OAI21X1)     0.14      93.30 f
+  dut5/div_17/u_div/u_add_PartRem_1_14/CO (kalman_alu5_2_DW01_add_355)
+                                                          0.00      93.30 f
+  dut5/div_17/U741/Y (INVX2)                              0.09      93.39 r
+  dut5/div_17/U3/Y (OR2X2)                                0.25      93.65 r
+  dut5/div_17/U54/Y (INVX2)                               0.83      94.47 f
+  dut5/div_17/u_div/u_mx_PartRem_0_14_12/Y (MUX2X1)       0.36      94.83 r
+  dut5/div_17/U567/Y (INVX2)                              0.13      94.96 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/A[12] (kalman_alu5_2_DW01_add_356)
+                                                          0.00      94.96 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/U119/Y (NOR2X1)
+                                                          0.21      95.18 r
+  dut5/div_17/u_div/u_add_PartRem_1_13/U115/Y (NOR2X1)
+                                                          0.41      95.59 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/U87/Y (NAND2X1)
+                                                          0.26      95.85 r
+  dut5/div_17/u_div/u_add_PartRem_1_13/U85/Y (NOR2X1)     0.21      96.06 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/U84/Y (AOI21X1)
+                                                          0.10      96.16 r
+  dut5/div_17/u_div/u_add_PartRem_1_13/U241/Y (BUFX2)     0.40      96.56 r
+  dut5/div_17/u_div/u_add_PartRem_1_13/U4/Y (OAI21X1)     0.11      96.67 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/U239/Y (BUFX2)     0.99      97.67 f
+  dut5/div_17/u_div/u_add_PartRem_1_13/CO (kalman_alu5_2_DW01_add_356)
+                                                          0.00      97.67 f
+  dut5/div_17/u_div/u_mx_PartRem_0_13_12/Y (MUX2X1)       0.36      98.03 r
+  dut5/div_17/U590/Y (INVX2)                              0.13      98.16 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/A[12] (kalman_alu5_2_DW01_add_357)
+                                                          0.00      98.16 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/U122/Y (NOR2X1)
+                                                          0.21      98.37 r
+  dut5/div_17/u_div/u_add_PartRem_0_12/U118/Y (NOR2X1)
+                                                          0.41      98.78 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/U90/Y (NAND2X1)
+                                                          0.26      99.05 r
+  dut5/div_17/u_div/u_add_PartRem_0_12/U88/Y (NOR2X1)     0.21      99.25 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/U87/Y (AOI21X1)
+                                                          0.10      99.36 r
+  dut5/div_17/u_div/u_add_PartRem_0_12/U246/Y (BUFX2)     0.40      99.76 r
+  dut5/div_17/u_div/u_add_PartRem_0_12/U3/Y (OAI21X1)     0.12      99.88 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/U244/Y (BUFX4)     0.71     100.60 f
+  dut5/div_17/u_div/u_add_PartRem_0_12/CO (kalman_alu5_2_DW01_add_357)
+                                                          0.00     100.60 f
+  dut5/div_17/u_div/u_mx_PartRem_0_12_12/Y (MUX2X1)       0.32     100.92 r
+  dut5/div_17/U612/Y (INVX2)                              0.13     101.05 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/A[12] (kalman_alu5_2_DW01_add_358)
+                                                          0.00     101.05 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/U122/Y (NOR2X1)
+                                                          0.21     101.26 r
+  dut5/div_17/u_div/u_add_PartRem_0_11/U118/Y (NOR2X1)
+                                                          0.41     101.67 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/U90/Y (NAND2X1)
+                                                          0.26     101.93 r
+  dut5/div_17/u_div/u_add_PartRem_0_11/U88/Y (NOR2X1)     0.21     102.14 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/U87/Y (AOI21X1)
+                                                          0.10     102.24 r
+  dut5/div_17/u_div/u_add_PartRem_0_11/U247/Y (BUFX2)     0.40     102.65 r
+  dut5/div_17/u_div/u_add_PartRem_0_11/U3/Y (OAI21X1)     0.11     102.76 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/U240/Y (BUFX2)     1.01     103.77 f
+  dut5/div_17/u_div/u_add_PartRem_0_11/CO (kalman_alu5_2_DW01_add_358)
+                                                          0.00     103.77 f
+  dut5/div_17/u_div/u_mx_PartRem_0_11_12/Y (MUX2X1)       0.36     104.13 r
+  dut5/div_17/U634/Y (INVX2)                              0.13     104.27 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/A[12] (kalman_alu5_2_DW01_add_359)
+                                                          0.00     104.27 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/U122/Y (NOR2X1)
+                                                          0.21     104.48 r
+  dut5/div_17/u_div/u_add_PartRem_0_10/U118/Y (NOR2X1)
+                                                          0.41     104.89 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/U90/Y (NAND2X1)
+                                                          0.26     105.15 r
+  dut5/div_17/u_div/u_add_PartRem_0_10/U88/Y (NOR2X1)     0.21     105.36 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/U87/Y (AOI21X1)
+                                                          0.10     105.46 r
+  dut5/div_17/u_div/u_add_PartRem_0_10/U247/Y (BUFX2)     0.40     105.86 r
+  dut5/div_17/u_div/u_add_PartRem_0_10/U3/Y (OAI21X1)     0.12     105.99 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/U245/Y (BUFX4)     0.77     106.75 f
+  dut5/div_17/u_div/u_add_PartRem_0_10/CO (kalman_alu5_2_DW01_add_359)
+                                                          0.00     106.75 f
+  dut5/div_17/u_div/u_mx_PartRem_0_10_12/Y (MUX2X1)       0.33     107.08 r
+  dut5/div_17/U656/Y (INVX2)                              0.13     107.21 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/A[12] (kalman_alu5_2_DW01_add_360)
+                                                          0.00     107.21 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/U122/Y (NOR2X1)     0.21     107.42 r
+  dut5/div_17/u_div/u_add_PartRem_0_9/U118/Y (NOR2X1)     0.41     107.84 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/U90/Y (NAND2X1)     0.26     108.10 r
+  dut5/div_17/u_div/u_add_PartRem_0_9/U88/Y (NOR2X1)      0.21     108.30 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/U87/Y (AOI21X1)     0.10     108.41 r
+  dut5/div_17/u_div/u_add_PartRem_0_9/U247/Y (BUFX2)      0.40     108.81 r
+  dut5/div_17/u_div/u_add_PartRem_0_9/U3/Y (OAI21X1)      0.11     108.92 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/U240/Y (BUFX2)      1.01     109.93 f
+  dut5/div_17/u_div/u_add_PartRem_0_9/CO (kalman_alu5_2_DW01_add_360)
+                                                          0.00     109.93 f
+  dut5/div_17/u_div/u_mx_PartRem_0_9_12/Y (MUX2X1)        0.36     110.30 r
+  dut5/div_17/U138/Y (INVX2)                              0.13     110.43 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/A[12] (kalman_alu5_2_DW01_add_361)
+                                                          0.00     110.43 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/U122/Y (NOR2X1)     0.21     110.64 r
+  dut5/div_17/u_div/u_add_PartRem_0_8/U118/Y (NOR2X1)     0.41     111.05 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/U90/Y (NAND2X1)     0.26     111.31 r
+  dut5/div_17/u_div/u_add_PartRem_0_8/U88/Y (NOR2X1)      0.21     111.52 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/U87/Y (AOI21X1)     0.10     111.62 r
+  dut5/div_17/u_div/u_add_PartRem_0_8/U247/Y (BUFX2)      0.40     112.03 r
+  dut5/div_17/u_div/u_add_PartRem_0_8/U3/Y (OAI21X1)      0.12     112.15 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/U245/Y (BUFX4)      0.77     112.92 f
+  dut5/div_17/u_div/u_add_PartRem_0_8/CO (kalman_alu5_2_DW01_add_361)
+                                                          0.00     112.92 f
+  dut5/div_17/u_div/u_mx_PartRem_0_8_12/Y (MUX2X1)        0.33     113.24 r
+  dut5/div_17/U160/Y (INVX2)                              0.13     113.38 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/A[12] (kalman_alu5_2_DW01_add_362)
+                                                          0.00     113.38 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/U122/Y (NOR2X1)     0.21     113.59 r
+  dut5/div_17/u_div/u_add_PartRem_0_7/U118/Y (NOR2X1)     0.41     114.00 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/U90/Y (NAND2X1)     0.26     114.26 r
+  dut5/div_17/u_div/u_add_PartRem_0_7/U88/Y (NOR2X1)      0.21     114.47 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/U87/Y (AOI21X1)     0.10     114.57 r
+  dut5/div_17/u_div/u_add_PartRem_0_7/U247/Y (BUFX2)      0.40     114.98 r
+  dut5/div_17/u_div/u_add_PartRem_0_7/U3/Y (OAI21X1)      0.11     115.08 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/U240/Y (BUFX2)      1.01     116.09 f
+  dut5/div_17/u_div/u_add_PartRem_0_7/CO (kalman_alu5_2_DW01_add_362)
+                                                          0.00     116.09 f
+  dut5/div_17/u_div/u_mx_PartRem_0_7_12/Y (MUX2X1)        0.36     116.46 r
+  dut5/div_17/U182/Y (INVX2)                              0.13     116.59 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/A[12] (kalman_alu5_2_DW01_add_363)
+                                                          0.00     116.59 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/U122/Y (NOR2X1)     0.21     116.80 r
+  dut5/div_17/u_div/u_add_PartRem_0_6/U118/Y (NOR2X1)     0.41     117.22 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/U90/Y (NAND2X1)     0.26     117.48 r
+  dut5/div_17/u_div/u_add_PartRem_0_6/U88/Y (NOR2X1)      0.21     117.68 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/U87/Y (AOI21X1)     0.10     117.79 r
+  dut5/div_17/u_div/u_add_PartRem_0_6/U247/Y (BUFX2)      0.40     118.19 r
+  dut5/div_17/u_div/u_add_PartRem_0_6/U3/Y (OAI21X1)      0.12     118.31 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/U245/Y (BUFX4)      0.77     119.08 f
+  dut5/div_17/u_div/u_add_PartRem_0_6/CO (kalman_alu5_2_DW01_add_363)
+                                                          0.00     119.08 f
+  dut5/div_17/u_div/u_mx_PartRem_0_6_12/Y (MUX2X1)        0.33     119.41 r
+  dut5/div_17/U204/Y (INVX2)                              0.13     119.54 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/A[12] (kalman_alu5_2_DW01_add_364)
+                                                          0.00     119.54 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/U122/Y (NOR2X1)     0.21     119.75 r
+  dut5/div_17/u_div/u_add_PartRem_0_5/U118/Y (NOR2X1)     0.41     120.16 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/U90/Y (NAND2X1)     0.26     120.43 r
+  dut5/div_17/u_div/u_add_PartRem_0_5/U88/Y (NOR2X1)      0.21     120.63 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/U87/Y (AOI21X1)     0.10     120.74 r
+  dut5/div_17/u_div/u_add_PartRem_0_5/U247/Y (BUFX2)      0.40     121.14 r
+  dut5/div_17/u_div/u_add_PartRem_0_5/U3/Y (OAI21X1)      0.11     121.25 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/U240/Y (BUFX2)      1.01     122.26 f
+  dut5/div_17/u_div/u_add_PartRem_0_5/CO (kalman_alu5_2_DW01_add_364)
+                                                          0.00     122.26 f
+  dut5/div_17/u_div/u_mx_PartRem_0_5_12/Y (MUX2X1)        0.36     122.62 r
+  dut5/div_17/U226/Y (INVX2)                              0.13     122.76 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/A[12] (kalman_alu5_2_DW01_add_365)
+                                                          0.00     122.76 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/U122/Y (NOR2X1)     0.21     122.97 r
+  dut5/div_17/u_div/u_add_PartRem_0_4/U118/Y (NOR2X1)     0.41     123.38 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/U90/Y (NAND2X1)     0.26     123.64 r
+  dut5/div_17/u_div/u_add_PartRem_0_4/U88/Y (NOR2X1)      0.21     123.85 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/U87/Y (AOI21X1)     0.10     123.95 r
+  dut5/div_17/u_div/u_add_PartRem_0_4/U247/Y (BUFX2)      0.40     124.36 r
+  dut5/div_17/u_div/u_add_PartRem_0_4/U3/Y (OAI21X1)      0.12     124.48 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/U245/Y (BUFX4)      0.77     125.24 f
+  dut5/div_17/u_div/u_add_PartRem_0_4/CO (kalman_alu5_2_DW01_add_365)
+                                                          0.00     125.24 f
+  dut5/div_17/u_div/u_mx_PartRem_0_4_12/Y (MUX2X1)        0.33     125.57 r
+  dut5/div_17/U248/Y (INVX2)                              0.13     125.70 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/A[12] (kalman_alu5_2_DW01_add_366)
+                                                          0.00     125.70 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/U122/Y (NOR2X1)     0.21     125.92 r
+  dut5/div_17/u_div/u_add_PartRem_0_3/U118/Y (NOR2X1)     0.41     126.33 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/U90/Y (NAND2X1)     0.26     126.59 r
+  dut5/div_17/u_div/u_add_PartRem_0_3/U88/Y (NOR2X1)      0.21     126.80 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/U87/Y (AOI21X1)     0.10     126.90 r
+  dut5/div_17/u_div/u_add_PartRem_0_3/U247/Y (BUFX2)      0.40     127.30 r
+  dut5/div_17/u_div/u_add_PartRem_0_3/U3/Y (OAI21X1)      0.11     127.41 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/U240/Y (BUFX2)      1.01     128.42 f
+  dut5/div_17/u_div/u_add_PartRem_0_3/CO (kalman_alu5_2_DW01_add_366)
+                                                          0.00     128.42 f
+  dut5/div_17/u_div/u_mx_PartRem_0_3_12/Y (MUX2X1)        0.36     128.79 r
+  dut5/div_17/U270/Y (INVX2)                              0.13     128.92 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/A[12] (kalman_alu5_2_DW01_add_367)
+                                                          0.00     128.92 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/U122/Y (NOR2X1)     0.21     129.13 r
+  dut5/div_17/u_div/u_add_PartRem_0_2/U118/Y (NOR2X1)     0.41     129.55 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/U90/Y (NAND2X1)     0.26     129.81 r
+  dut5/div_17/u_div/u_add_PartRem_0_2/U88/Y (NOR2X1)      0.21     130.01 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/U87/Y (AOI21X1)     0.10     130.12 r
+  dut5/div_17/u_div/u_add_PartRem_0_2/U247/Y (BUFX2)      0.40     130.52 r
+  dut5/div_17/u_div/u_add_PartRem_0_2/U3/Y (OAI21X1)      0.12     130.64 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/U245/Y (BUFX4)      0.77     131.41 f
+  dut5/div_17/u_div/u_add_PartRem_0_2/CO (kalman_alu5_2_DW01_add_367)
+                                                          0.00     131.41 f
+  dut5/div_17/u_div/u_mx_PartRem_0_2_12/Y (MUX2X1)        0.33     131.73 r
+  dut5/div_17/U313/Y (INVX2)                              0.13     131.87 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/A[12] (kalman_alu5_2_DW01_add_368)
+                                                          0.00     131.87 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/U122/Y (NOR2X1)     0.21     132.08 r
+  dut5/div_17/u_div/u_add_PartRem_0_1/U118/Y (NOR2X1)     0.41     132.49 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/U90/Y (NAND2X1)     0.26     132.75 r
+  dut5/div_17/u_div/u_add_PartRem_0_1/U88/Y (NOR2X1)      0.21     132.96 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/U87/Y (AOI21X1)     0.10     133.06 r
+  dut5/div_17/u_div/u_add_PartRem_0_1/U247/Y (BUFX2)      0.40     133.47 r
+  dut5/div_17/u_div/u_add_PartRem_0_1/U3/Y (OAI21X1)      0.11     133.57 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/U239/Y (BUFX2)      1.04     134.62 f
+  dut5/div_17/u_div/u_add_PartRem_0_1/CO (kalman_alu5_2_DW01_add_368)
+                                                          0.00     134.62 f
+  dut5/div_17/u_div/u_mx_PartRem_0_1_10/Y (MUX2X1)        0.41     135.03 f
+  dut5/div_17/U452/Y (INVX2)                              0.10     135.13 r
+  dut5/div_17/u_div/u_add_PartRem_0_0/A[10] (kalman_alu5_2_DW01_add_369)
+                                                          0.00     135.13 r
+  dut5/div_17/u_div/u_add_PartRem_0_0/U153/Y (NOR2X1)     0.20     135.34 f
+  dut5/div_17/u_div/u_add_PartRem_0_0/U150/Y (OAI21X1)
+                                                          0.17     135.50 r
+  dut5/div_17/u_div/u_add_PartRem_0_0/U148/Y (AOI21X1)
+                                                          0.17     135.67 f
+  dut5/div_17/u_div/u_add_PartRem_0_0/U96/Y (OAI21X1)     0.14     135.81 r
+  dut5/div_17/u_div/u_add_PartRem_0_0/U94/Y (AOI21X1)     0.16     135.97 f
+  dut5/div_17/u_div/u_add_PartRem_0_0/U4/Y (OAI21X1)      0.42     136.39 r
+  dut5/div_17/u_div/u_add_PartRem_0_0/CO (kalman_alu5_2_DW01_add_369)
+                                                          0.00     136.39 r
+  dut5/div_17/quotient[0] (kalman_alu5_2_DW_div_uns_11)
+                                                          0.00     136.39 r
+  dut5/K1_out[0] (kalman_alu5_2)                          0.00     136.39 r
+  dut6/K1_out[0] (kalman_alu6_2)                          0.00     136.39 r
+  dut6/mult_21/a[0] (kalman_alu6_2_DW_mult_uns_1)         0.00     136.39 r
+  dut6/mult_21/U507/Y (INVX2)                             0.65     137.04 f
+  dut6/mult_21/U470/Y (AND2X2)                            0.41     137.45 f
+  dut6/mult_21/U494/Y (INVX2)                             0.48     137.92 r
+  dut6/mult_21/U596/Y (OAI22X1)                           0.19     138.12 f
+  dut6/mult_21/U157/YS (HAX1)                             0.41     138.53 r
+  dut6/mult_21/U537/Y (INVX2)                             0.08     138.61 f
+  dut6/mult_21/U588/Y (OAI22X1)                           0.14     138.75 r
+  dut6/mult_21/U587/Y (AOI21X1)                           0.23     138.99 f
+  dut6/mult_21/U586/Y (NOR2X1)                            0.11     139.10 r
+  dut6/mult_21/U585/Y (AOI21X1)                           0.13     139.23 f
+  dut6/mult_21/U584/Y (OAI21X1)                           0.18     139.40 r
+  dut6/mult_21/U583/Y (AND2X1)                            0.15     139.55 r
+  dut6/mult_21/U582/Y (AOI21X1)                           0.15     139.70 f
+  dut6/mult_21/U531/Y (INVX2)                             0.09     139.79 r
+  dut6/mult_21/U581/Y (AOI21X1)                           0.21     139.99 f
+  dut6/mult_21/U580/Y (NOR2X1)                            0.11     140.10 r
+  dut6/mult_21/U579/Y (AOI21X1)                           0.13     140.23 f
+  dut6/mult_21/U578/Y (OAI21X1)                           0.18     140.41 r
+  dut6/mult_21/U577/Y (AND2X1)                            0.15     140.56 r
+  dut6/mult_21/U576/Y (AOI21X1)                           0.15     140.71 f
+  dut6/mult_21/U526/Y (INVX2)                             0.09     140.79 r
+  dut6/mult_21/U575/Y (AOI21X1)                           0.21     141.00 f
+  dut6/mult_21/U574/Y (NOR2X1)                            0.11     141.11 r
+  dut6/mult_21/U573/Y (AOI21X1)                           0.13     141.24 f
+  dut6/mult_21/U572/Y (OAI21X1)                           0.18     141.42 r
+  dut6/mult_21/U571/Y (AND2X1)                            0.15     141.56 r
+  dut6/mult_21/U570/Y (AOI21X1)                           0.15     141.71 f
+  dut6/mult_21/U521/Y (INVX2)                             0.09     141.80 r
+  dut6/mult_21/U569/Y (AOI21X1)                           0.21     142.01 f
+  dut6/mult_21/U568/Y (NOR2X1)                            0.11     142.12 r
+  dut6/mult_21/U567/Y (AOI21X1)                           0.13     142.24 f
+  dut6/mult_21/U566/Y (OAI21X1)                           0.18     142.42 r
+  dut6/mult_21/U565/Y (AND2X1)                            0.15     142.57 r
+  dut6/mult_21/U564/Y (AOI21X1)                           0.15     142.72 f
+  dut6/mult_21/U516/Y (INVX2)                             0.09     142.80 r
+  dut6/mult_21/U563/Y (AOI21X1)                           0.21     143.01 f
+  dut6/mult_21/U562/Y (NOR2X1)                            0.11     143.12 r
+  dut6/mult_21/U561/Y (AOI21X1)                           0.13     143.25 f
+  dut6/mult_21/U560/Y (OAI21X1)                           0.22     143.47 r
+  dut6/mult_21/U55/YC (FAX1)                              0.38     143.86 r
+  dut6/mult_21/U54/YS (FAX1)                              0.63     144.49 f
+  dut6/mult_21/product[14] (kalman_alu6_2_DW_mult_uns_1)
+                                                          0.00     144.49 f
+  dut6/add_24/A[1] (kalman_alu6_2_DW01_add_1)             0.00     144.49 f
+  dut6/add_24/U1_1/YC (FAX1)                              0.46     144.95 f
+  dut6/add_24/U1_2/YC (FAX1)                              0.46     145.41 f
+  dut6/add_24/U1_3/YC (FAX1)                              0.46     145.87 f
+  dut6/add_24/U1_4/YC (FAX1)                              0.46     146.33 f
+  dut6/add_24/U1_5/YC (FAX1)                              0.46     146.79 f
+  dut6/add_24/U1_6/YC (FAX1)                              0.46     147.25 f
+  dut6/add_24/U1_7/YC (FAX1)                              0.46     147.72 f
+  dut6/add_24/U1_8/YC (FAX1)                              0.46     148.18 f
+  dut6/add_24/U1_9/YC (FAX1)                              0.46     148.64 f
+  dut6/add_24/U1_10/YC (FAX1)                             0.46     149.10 f
+  dut6/add_24/U1_11/YC (FAX1)                             0.46     149.56 f
+  dut6/add_24/U1_12/YC (FAX1)                             0.46     150.02 f
+  dut6/add_24/U1_13/YC (FAX1)                             0.46     150.49 f
+  dut6/add_24/U1_14/YC (FAX1)                             0.46     150.95 f
+  dut6/add_24/U1_15/YS (FAX1)                             0.45     151.40 r
+  dut6/add_24/SUM[15] (kalman_alu6_2_DW01_add_1)          0.00     151.40 r
+  dut6/bias_out[15] (kalman_alu6_2)                       0.00     151.40 r
+  U1839/Y (MUX2X1)                                        0.12     151.52 f
+  U1840/Y (INVX2)                                         0.11     151.62 r
+  bias_in_reg[15]/D (DFFSR)                               0.00     151.62 r
+  data arrival time                                                151.62
+
+  clock clk (rise edge)                                 200.00     200.00
+  clock network delay (ideal)                             0.00     200.00
+  bias_in_reg[15]/CLK (DFFSR)                             0.00     200.00 r
+  library setup time                                     -0.22     199.78
+  data required time                                               199.78
+  --------------------------------------------------------------------------
+  data required time                                               199.78
+  data arrival time                                               -151.62
+  --------------------------------------------------------------------------
+  slack (MET)                                                       48.16
+
+
+1
+ 
+****************************************
+Report : area
+Design : kalman_alu
+Version: G-2012.06
+Date   : Sat Apr 26 17:00:47 2014
+****************************************
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+Number of ports:                          155
+Number of nets:                          2840
+Number of cells:                         1395
+Number of combinational cells:            954
+Number of sequential cells:               420
+Number of macros:                           0
+Number of buf/inv:                        534
+Number of references:                      25
+
+Combinational area:       19416429.000000
+Noncombinational area:    665280.000000
+Net Interconnect area:      undefined  (No wire load specified)
+
+Total cell area:          20081709.000000
+Total area:                 undefined
+1
+Loading db file '/package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db'
+Information: Propagating switching activity (low effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -hier
+        -analysis_effort low
+Design : kalman_alu
+Version: G-2012.06
+Date   : Sat Apr 26 17:00:53 2014
+****************************************
+
+
+Library(s) Used:
+
+    osu05_stdcells (File: /package/eda/cells/OSU/v2.7/synopsys/lib/ami05/osu05_stdcells.db)
+
+
+Operating Conditions: typical   Library: osu05_stdcells
+Wire Load Model Mode: top
+
+
+Global Operating Voltage = 5    
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000pf
+    Time Units = 1ns
+    Dynamic Power Units = 1mW    (derived from V,C,T units)
+    Leakage Power Units = 1nW
+
+
+--------------------------------------------------------------------------------
+                                       Switch   Int      Leak     Total
+Hierarchy                              Power    Power    Power    Power    %
+--------------------------------------------------------------------------------
+kalman_alu                               32.303   37.962 6.07e+03   70.271 100.0
+  dut21 (kalman_alu7_0)                   3.075    3.351  553.518    6.427   9.1
+    gt_32 (kalman_alu7_0_DW_cmp_11)    7.86e-03 1.45e-02    5.867 2.23e-02   0.0
+    gt_31 (kalman_alu7_0_DW_cmp_10)    9.02e-03 1.23e-02    5.867 2.14e-02   0.0
+    gt_30 (kalman_alu7_0_DW_cmp_9)     9.01e-03 1.34e-02    5.867 2.24e-02   0.0
+    gt_29 (kalman_alu7_0_DW_cmp_8)     8.49e-03 1.62e-02    5.867 2.47e-02   0.0
+    sub_30 (kalman_alu7_0_DW01_sub_23) 6.36e-03 9.99e-03    8.972 1.64e-02   0.0
+    sub_32 (kalman_alu7_0_DW01_sub_22) 7.41e-03 1.63e-02    8.972 2.37e-02   0.0
+    sub_29 (kalman_alu7_0_DW01_sub_21) 7.57e-03 1.38e-02    8.972 2.14e-02   0.0
+    sub_31 (kalman_alu7_0_DW01_sub_20) 6.37e-03 9.24e-03    8.972 1.56e-02   0.0
+    sub_30_2 (kalman_alu7_0_DW01_sub_19)
+                                       2.18e-02 3.03e-02    8.972 5.21e-02   0.1
+    sub_32_2 (kalman_alu7_0_DW01_sub_18)
+                                       2.63e-02 3.08e-02    8.972 5.71e-02   0.1
+    sub_29_2 (kalman_alu7_0_DW01_sub_17)
+                                       2.21e-02 3.16e-02    8.972 5.37e-02   0.1
+    sub_31_2 (kalman_alu7_0_DW01_sub_16)
+                                       2.18e-02 2.85e-02    8.972 5.03e-02   0.1
+    mult_28 (kalman_alu7_0_DW_mult_uns_5)
+                                          0.603    0.668  110.669    1.271   1.8
+    mult_26 (kalman_alu7_0_DW_mult_uns_4)
+                                          0.784    0.888  110.669    1.672   2.4
+    mult_27 (kalman_alu7_0_DW_mult_uns_7)
+                                          0.649    0.669  110.853    1.318   1.9
+    mult_25 (kalman_alu7_0_DW_mult_uns_6)
+                                          0.835    0.858  110.853    1.693   2.4
+  dut20 (kalman_alu6_0)                   1.527    1.974  156.571    3.501   5.0
+    add_23 (kalman_alu6_0_DW01_add_0)  2.67e-02 5.74e-02    5.762 8.41e-02   0.1
+    mult_20 (kalman_alu6_0_DW_mult_uns_0)
+                                          0.879    1.072   72.523    1.951   2.8
+    add_24 (kalman_alu6_0_DW01_add_1)  1.74e-02 3.52e-02    5.762 5.26e-02   0.1
+    mult_21 (kalman_alu6_0_DW_mult_uns_1)
+                                          0.603    0.809   72.523    1.413   2.0
+  dut19 (kalman_alu5_0)                   3.643    3.575  845.819    7.219  10.3
+    div_17 (kalman_alu5_0_DW_div_uns_11)
+                                          1.747    1.737  422.630    3.485   5.0
+    div_16 (kalman_alu5_0_DW_div_uns_7)
+                                          1.860    1.834  423.035    3.695   5.3
+  dut18 (kalman_alu4_0)                2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+    add_15 (kalman_alu4_0_DW01_add_2)  2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+  dut17 (kalman_alu3_0)                   0.353    0.193   22.396    0.546   0.8
+    sub_0_root_sub_0_root_add_14 (kalman_alu3_0_DW01_sub_1)
+                                       4.34e-02 5.96e-02    6.242    0.103   0.1
+    gt_14 (kalman_alu3_0_DW_cmp_0)     2.92e-02 3.41e-02    3.670 6.34e-02   0.1
+    sub_14 (kalman_alu3_0_DW01_sub_0)  4.30e-02 5.66e-02    6.242 9.95e-02   0.1
+  dut16 (kalman_alu2_0)                   1.318    1.288  268.561    2.606   3.7
+    add_0_root_sub_0_root_add_36 (kalman_alu2_0_DW01_add_7)
+                                       1.33e-02 2.22e-02    8.320 3.55e-02   0.1
+    r1195 (kalman_alu2_0_DW01_sub_10)  3.05e-02 3.71e-02    8.969 6.76e-02   0.1
+    r1193 (kalman_alu2_0_DW01_sub_9)   1.58e-02 2.13e-02    8.972 3.71e-02   0.1
+    r369 (kalman_alu2_0_DW_mult_uns_6)    0.495    0.461   70.661    0.956   1.4
+    add_42 (kalman_alu2_0_DW01_add_6)  3.14e-02 1.10e-02    8.320 4.24e-02   0.1
+    mult_37 (kalman_alu2_0_DW_mult_uns_5)
+                                          0.460    0.458   68.798    0.918   1.3
+    gt_35 (kalman_alu2_0_DW_cmp_5)     8.34e-03 1.38e-02    5.910 2.21e-02   0.0
+    sub_0_root_sub_0_root_add_36_2 (kalman_alu2_0_DW01_sub_6)
+                                       3.85e-02 5.19e-02   14.410 9.04e-02   0.1
+    gt_36 (kalman_alu2_0_DW_cmp_4)     1.07e-02 1.25e-02    5.910 2.32e-02   0.0
+    sub_44_2 (kalman_alu2_0_DW01_sub_0)
+                                       1.21e-02 2.35e-02    9.006 3.56e-02   0.1
+    sub_44 (kalman_alu2_0_DW01_sub_1)  2.48e-02 3.99e-02    9.004 6.47e-02   0.1
+    add_45 (kalman_alu2_0_DW01_add_0)  2.62e-02 1.66e-02    6.994 4.28e-02   0.1
+    mult_40 (kalman_alu2_0_DW_mult_uns_0)
+                                       3.09e-02 2.99e-02    4.565 6.07e-02   0.1
+    sub_1_root_sub_0_root_add_36 (kalman_alu2_0_DW01_sub_4)
+                                       2.10e-02 2.02e-02    7.123 4.12e-02   0.1
+    lt_43 (kalman_alu2_0_DW_cmp_1)     9.15e-03 1.46e-02    5.343 2.37e-02   0.0
+    gt_44 (kalman_alu2_0_DW_cmp_0)     6.68e-03 1.42e-02    5.343 2.09e-02   0.0
+  dut15 (kalman_alu1_0)                   0.580    0.561   72.357    1.141   1.6
+    add_30 (kalman_alu1_0_DW01_add_0)  5.52e-02 3.39e-02    5.762 8.91e-02   0.1
+    mult_28 (kalman_alu1_0_DW_mult_uns_0)
+                                          0.440    0.428   48.417    0.869   1.2
+    gt_24 (kalman_alu1_0_DW_cmp_0)     1.42e-02 2.26e-02    3.670 3.68e-02   0.1
+    sub_24 (kalman_alu1_0_DW01_sub_1)  1.87e-02 3.08e-02    6.242 4.95e-02   0.1
+    sub_24_2 (kalman_alu1_0_DW01_sub_0)
+                                       1.86e-02 3.05e-02    6.242 4.91e-02   0.1
+  dut14 (kalman_alu7_1)                   3.075    3.351  553.518    6.427   9.1
+    gt_32 (kalman_alu7_1_DW_cmp_11)    7.86e-03 1.45e-02    5.867 2.23e-02   0.0
+    gt_31 (kalman_alu7_1_DW_cmp_10)    9.02e-03 1.23e-02    5.867 2.14e-02   0.0
+    gt_30 (kalman_alu7_1_DW_cmp_9)     9.01e-03 1.34e-02    5.867 2.24e-02   0.0
+    gt_29 (kalman_alu7_1_DW_cmp_8)     8.49e-03 1.62e-02    5.867 2.47e-02   0.0
+    sub_30 (kalman_alu7_1_DW01_sub_23) 6.36e-03 9.99e-03    8.972 1.64e-02   0.0
+    sub_32 (kalman_alu7_1_DW01_sub_22) 7.41e-03 1.63e-02    8.972 2.37e-02   0.0
+    sub_29 (kalman_alu7_1_DW01_sub_21) 7.57e-03 1.38e-02    8.972 2.14e-02   0.0
+    sub_31 (kalman_alu7_1_DW01_sub_20) 6.37e-03 9.24e-03    8.972 1.56e-02   0.0
+    sub_30_2 (kalman_alu7_1_DW01_sub_19)
+                                       2.18e-02 3.03e-02    8.972 5.21e-02   0.1
+    sub_32_2 (kalman_alu7_1_DW01_sub_18)
+                                       2.63e-02 3.08e-02    8.972 5.71e-02   0.1
+    sub_29_2 (kalman_alu7_1_DW01_sub_17)
+                                       2.21e-02 3.16e-02    8.972 5.37e-02   0.1
+    sub_31_2 (kalman_alu7_1_DW01_sub_16)
+                                       2.18e-02 2.85e-02    8.972 5.03e-02   0.1
+    mult_28 (kalman_alu7_1_DW_mult_uns_5)
+                                          0.603    0.668  110.669    1.271   1.8
+    mult_26 (kalman_alu7_1_DW_mult_uns_4)
+                                          0.784    0.888  110.669    1.672   2.4
+    mult_27 (kalman_alu7_1_DW_mult_uns_7)
+                                          0.649    0.669  110.853    1.318   1.9
+    mult_25 (kalman_alu7_1_DW_mult_uns_6)
+                                          0.835    0.858  110.853    1.693   2.4
+  dut13 (kalman_alu6_1)                   1.525    1.971  156.571    3.496   5.0
+    add_23 (kalman_alu6_1_DW01_add_0)  2.68e-02 5.76e-02    5.762 8.44e-02   0.1
+    mult_20 (kalman_alu6_1_DW_mult_uns_0)
+                                          0.878    1.070   72.523    1.947   2.8
+    add_24 (kalman_alu6_1_DW01_add_1)  1.73e-02 3.51e-02    5.762 5.25e-02   0.1
+    mult_21 (kalman_alu6_1_DW_mult_uns_1)
+                                          0.603    0.808   72.523    1.412   2.0
+  dut12 (kalman_alu5_1)                   3.643    3.575  845.819    7.219  10.3
+    div_17 (kalman_alu5_1_DW_div_uns_11)
+                                          1.747    1.737  422.630    3.485   5.0
+    div_16 (kalman_alu5_1_DW_div_uns_7)
+                                          1.860    1.834  423.035    3.695   5.3
+  dut11 (kalman_alu4_1)                2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+    add_15 (kalman_alu4_1_DW01_add_2)  2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+  dut10 (kalman_alu3_1)                   0.350    0.191   22.396    0.541   0.8
+    sub_0_root_sub_0_root_add_14 (kalman_alu3_1_DW01_sub_1)
+                                       4.30e-02 5.90e-02    6.242    0.102   0.1
+    gt_14 (kalman_alu3_1_DW_cmp_0)     2.88e-02 3.36e-02    3.670 6.25e-02   0.1
+    sub_14 (kalman_alu3_1_DW01_sub_0)  4.27e-02 5.62e-02    6.242 9.88e-02   0.1
+  dut9 (kalman_alu2_1)                    1.318    1.288  268.561    2.606   3.7
+    add_0_root_sub_0_root_add_36 (kalman_alu2_1_DW01_add_7)
+                                       1.33e-02 2.22e-02    8.320 3.55e-02   0.1
+    r1195 (kalman_alu2_1_DW01_sub_10)  3.05e-02 3.71e-02    8.969 6.76e-02   0.1
+    r1193 (kalman_alu2_1_DW01_sub_9)   1.58e-02 2.13e-02    8.972 3.71e-02   0.1
+    r369 (kalman_alu2_1_DW_mult_uns_6)    0.495    0.461   70.661    0.956   1.4
+    add_42 (kalman_alu2_1_DW01_add_6)  3.14e-02 1.10e-02    8.320 4.24e-02   0.1
+    mult_37 (kalman_alu2_1_DW_mult_uns_5)
+                                          0.460    0.458   68.798    0.918   1.3
+    gt_35 (kalman_alu2_1_DW_cmp_5)     8.34e-03 1.38e-02    5.910 2.21e-02   0.0
+    sub_0_root_sub_0_root_add_36_2 (kalman_alu2_1_DW01_sub_6)
+                                       3.85e-02 5.19e-02   14.410 9.04e-02   0.1
+    gt_36 (kalman_alu2_1_DW_cmp_4)     1.07e-02 1.25e-02    5.910 2.32e-02   0.0
+    sub_44_2 (kalman_alu2_1_DW01_sub_0)
+                                       1.21e-02 2.35e-02    9.006 3.56e-02   0.1
+    sub_44 (kalman_alu2_1_DW01_sub_1)  2.48e-02 3.99e-02    9.004 6.47e-02   0.1
+    add_45 (kalman_alu2_1_DW01_add_0)  2.62e-02 1.66e-02    6.994 4.28e-02   0.1
+    mult_40 (kalman_alu2_1_DW_mult_uns_0)
+                                       3.09e-02 2.99e-02    4.565 6.07e-02   0.1
+    sub_1_root_sub_0_root_add_36 (kalman_alu2_1_DW01_sub_4)
+                                       2.10e-02 2.02e-02    7.123 4.12e-02   0.1
+    lt_43 (kalman_alu2_1_DW_cmp_1)     9.15e-03 1.46e-02    5.343 2.37e-02   0.0
+    gt_44 (kalman_alu2_1_DW_cmp_0)     6.68e-03 1.42e-02    5.343 2.09e-02   0.0
+  dut8 (kalman_alu1_1)                    0.579    0.560   72.357    1.139   1.6
+    add_30 (kalman_alu1_1_DW01_add_0)  5.46e-02 3.35e-02    5.762 8.81e-02   0.1
+    mult_28 (kalman_alu1_1_DW_mult_uns_0)
+                                          0.440    0.428   48.417    0.867   1.2
+    gt_24 (kalman_alu1_1_DW_cmp_0)     1.43e-02 2.27e-02    3.670 3.70e-02   0.1
+    sub_24 (kalman_alu1_1_DW01_sub_1)  1.87e-02 3.08e-02    6.242 4.95e-02   0.1
+    sub_24_2 (kalman_alu1_1_DW01_sub_0)
+                                       1.87e-02 3.06e-02    6.242 4.93e-02   0.1
+  dut7 (kalman_alu7_2)                    3.075    3.351  553.518    6.427   9.1
+    gt_32 (kalman_alu7_2_DW_cmp_11)    7.86e-03 1.45e-02    5.867 2.23e-02   0.0
+    gt_31 (kalman_alu7_2_DW_cmp_10)    9.02e-03 1.23e-02    5.867 2.14e-02   0.0
+    gt_30 (kalman_alu7_2_DW_cmp_9)     9.01e-03 1.34e-02    5.867 2.24e-02   0.0
+    gt_29 (kalman_alu7_2_DW_cmp_8)     8.49e-03 1.62e-02    5.867 2.47e-02   0.0
+    sub_30 (kalman_alu7_2_DW01_sub_23) 6.36e-03 9.99e-03    8.972 1.64e-02   0.0
+    sub_32 (kalman_alu7_2_DW01_sub_22) 7.41e-03 1.63e-02    8.972 2.37e-02   0.0
+    sub_29 (kalman_alu7_2_DW01_sub_21) 7.57e-03 1.38e-02    8.972 2.14e-02   0.0
+    sub_31 (kalman_alu7_2_DW01_sub_20) 6.37e-03 9.24e-03    8.972 1.56e-02   0.0
+    sub_30_2 (kalman_alu7_2_DW01_sub_19)
+                                       2.18e-02 3.03e-02    8.972 5.21e-02   0.1
+    sub_32_2 (kalman_alu7_2_DW01_sub_18)
+                                       2.63e-02 3.08e-02    8.972 5.71e-02   0.1
+    sub_29_2 (kalman_alu7_2_DW01_sub_17)
+                                       2.21e-02 3.16e-02    8.972 5.37e-02   0.1
+    sub_31_2 (kalman_alu7_2_DW01_sub_16)
+                                       2.18e-02 2.85e-02    8.972 5.03e-02   0.1
+    mult_28 (kalman_alu7_2_DW_mult_uns_5)
+                                          0.603    0.668  110.669    1.271   1.8
+    mult_26 (kalman_alu7_2_DW_mult_uns_4)
+                                          0.784    0.888  110.669    1.672   2.4
+    mult_27 (kalman_alu7_2_DW_mult_uns_7)
+                                          0.649    0.669  110.853    1.318   1.9
+    mult_25 (kalman_alu7_2_DW_mult_uns_6)
+                                          0.835    0.858  110.853    1.693   2.4
+  dut6 (kalman_alu6_2)                    1.529    1.977  156.571    3.506   5.0
+    add_23 (kalman_alu6_2_DW01_add_0)  2.68e-02 5.75e-02    5.762 8.43e-02   0.1
+    mult_20 (kalman_alu6_2_DW_mult_uns_0)
+                                          0.881    1.074   72.523    1.954   2.8
+    add_24 (kalman_alu6_2_DW01_add_1)  1.73e-02 3.51e-02    5.762 5.24e-02   0.1
+    mult_21 (kalman_alu6_2_DW_mult_uns_1)
+                                          0.604    0.811   72.523    1.416   2.0
+  dut5 (kalman_alu5_2)                    3.643    3.575  845.819    7.219  10.3
+    div_17 (kalman_alu5_2_DW_div_uns_11)
+                                          1.747    1.737  422.630    3.485   5.0
+    div_16 (kalman_alu5_2_DW_div_uns_7)
+                                          1.860    1.834  423.035    3.695   5.3
+  dut4 (kalman_alu4_2)                 2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+    add_15 (kalman_alu4_2_DW01_add_2)  2.51e-02 1.74e-02    5.633 4.25e-02   0.1
+  dut3 (kalman_alu3_2)                    0.354    0.193   22.396    0.547   0.8
+    sub_0_root_sub_0_root_add_14 (kalman_alu3_2_DW01_sub_1)
+                                       4.35e-02 5.97e-02    6.242    0.103   0.1
+    gt_14 (kalman_alu3_2_DW_cmp_0)     2.92e-02 3.41e-02    3.670 6.34e-02   0.1
+    sub_14 (kalman_alu3_2_DW01_sub_0)  4.30e-02 5.67e-02    6.242 9.98e-02   0.1
+  dut2 (kalman_alu2_2)                    1.318    1.288  268.561    2.606   3.7
+    add_0_root_sub_0_root_add_36 (kalman_alu2_2_DW01_add_7)
+                                       1.33e-02 2.22e-02    8.320 3.55e-02   0.1
+    r1048 (kalman_alu2_2_DW01_sub_10)  3.05e-02 3.71e-02    8.969 6.76e-02   0.1
+    r1046 (kalman_alu2_2_DW01_sub_9)   1.58e-02 2.13e-02    8.972 3.71e-02   0.1
+    r369 (kalman_alu2_2_DW_mult_uns_6)    0.495    0.461   70.661    0.956   1.4
+    add_42 (kalman_alu2_2_DW01_add_6)  3.14e-02 1.10e-02    8.320 4.24e-02   0.1
+    mult_37 (kalman_alu2_2_DW_mult_uns_5)
+                                          0.460    0.458   68.798    0.918   1.3
+    gt_35 (kalman_alu2_2_DW_cmp_5)     8.34e-03 1.38e-02    5.910 2.21e-02   0.0
+    sub_0_root_sub_0_root_add_36_2 (kalman_alu2_2_DW01_sub_6)
+                                       3.85e-02 5.19e-02   14.410 9.04e-02   0.1
+    gt_36 (kalman_alu2_2_DW_cmp_4)     1.07e-02 1.25e-02    5.910 2.32e-02   0.0
+    sub_44_2 (kalman_alu2_2_DW01_sub_0)
+                                       1.21e-02 2.35e-02    9.006 3.56e-02   0.1
+    sub_44 (kalman_alu2_2_DW01_sub_1)  2.48e-02 3.99e-02    9.004 6.47e-02   0.1
+    add_45 (kalman_alu2_2_DW01_add_0)  2.62e-02 1.66e-02    6.994 4.28e-02   0.1
+    mult_40 (kalman_alu2_2_DW_mult_uns_1)
+                                       3.09e-02 2.99e-02    4.565 6.07e-02   0.1
+    sub_1_root_sub_0_root_add_36 (kalman_alu2_2_DW01_sub_5)
+                                       2.10e-02 2.02e-02    7.123 4.12e-02   0.1
+    lt_43 (kalman_alu2_2_DW_cmp_1)     9.15e-03 1.46e-02    5.343 2.37e-02   0.0
+    gt_44 (kalman_alu2_2_DW_cmp_0)     6.68e-03 1.42e-02    5.343 2.09e-02   0.0
+  dut1 (kalman_alu1_2)                    0.579    0.560   72.357    1.139   1.6
+    add_30 (kalman_alu1_2_DW01_add_0)  5.50e-02 3.37e-02    5.762 8.87e-02   0.1
+    mult_28 (kalman_alu1_2_DW_mult_uns_0)
+                                          0.439    0.428   48.417    0.867   1.2
+    gt_24 (kalman_alu1_2_DW_cmp_0)     1.42e-02 2.26e-02    3.670 3.69e-02   0.1
+    sub_24 (kalman_alu1_2_DW01_sub_1)  1.87e-02 3.08e-02    6.242 4.95e-02   0.1
+    sub_24_2 (kalman_alu1_2_DW01_sub_0)
+                                       1.87e-02 3.07e-02    6.242 4.94e-02   0.1
+1

@@ -1,0 +1,38 @@
+// $Id: $
+// File name:   controllerUnit.sv
+// Created:     4/15/2014
+// Author:      Yuhao Chen
+// Lab Section: 2
+// Version:     1.0  Initial Design Entry
+// Description: main controller
+module controllerUnit
+(
+  input wire clk,
+  input wire n_rst,
+  input wire configured,
+  input wire acc_ready,
+  input wire gyro_ready,
+  input wire mag_ready,
+  input wire kalman_done,
+  input wire output_done,
+  output reg acc_read,
+  output reg gyro_read,
+  output reg mag_read,
+  output reg load_preprocessor1,
+  output reg load_preprocessor2,
+  output reg load_gyro,
+  output reg roll_clk,
+  output reg pitch_clk,
+  output reg yaw_clk,
+  output reg yaw_enable,
+  output reg roll_pitch_enable,
+  output reg clear,
+  output reg write_enable,
+  output reg output_sel
+);
+
+typedef enum bit [3:0] { IDLE, LOAD_ROLL_PITCH, CALCULATE_ROLL_PITCH , ROLL_PITCH_DONE, OUTPUT_ROLL, OUTPUT_PITCH, LOAD_YAW, CALCULATE_YAW, YAW_DONE, OUTPUT_YAW} stateType;
+
+
+stateType state;
+stateType next_state;

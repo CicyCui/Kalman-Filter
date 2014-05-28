@@ -1,0 +1,227 @@
+// $Id: $
+// File name:   Preprocessor.sv
+// Created:     4/5/2014
+// Author:      Yuchen Cui
+// Lab Section: 337-02
+// Version:     1.0  Initial Design Entry
+// Description: Preprocessor block
+module Preprocessor(
+  input wire clk,
+  input wire n_rst,
+  input wire load_acc_in, //signal from controller to load data from 
+  input wire load_mag_in, //accelerometer registers and magnetic compass registers
+  input wire [15:0] acc_x_in,
+  input wire [15:0] acc_y_in,
+  input wire [15:0] acc_z_in,
+  input wire [15:0] mag_x_in,
+  input wire [15:0] mag_y_in,
+  input wire [15:0] declination_in, //constant value from register map
+  
+  output wire [15:0] roll_angle_out,
+  output wire [15:0] pitch_angle_out,
+  output wire [15:0] yaw_angle_out,
+  //output wire [2:0] state,n_state, //curr_state
+  //output wire [31:0] square_sum,
+  output wire data_done_out //output data ready to be read
+  
+  );
+  
+  //variables for arctan values
+  reg [15:0] arctan_out1;
+  //reg [15:0] arctan_x2,arctan_y2,arctan_out2;
+  
+  //data registers
+  reg [15:0] acc_x,acc_y,acc_z,mag_x,mag_y,acc_x0,acc_y0,acc_z0,mag_x0,mag_y0;
+  
+  //intermediate data
+  reg [31:0] acc_y_square,acc_z_square,square_sum;
+  reg [15:0] sqrt_yz,arctan_x,arctan_y,arctan_out;
+  reg sqrt_done;
+  
+  
+  //output data
+  reg [15:0] roll_angle,pitch_angle,yaw_angle;
+  reg [15:0] roll_next,pitch_next,yaw_next;
+  reg data_done;
+  //reg roll_sign,pitch_sign,yaw_sign;
+  reg [15:0] acc_x_neg;
+  reg [15:0] acc_y_mag,acc_z_mag;
+  
+  // preprocessor procedures
+  typedef enum bit [2:0] { IDLE, LOAD_ACC,LOAD_MAG, CALC_SQRT, BUFF1,BUFF2,BUFF3,OUTPUT } State;
+  
+  State curr_state;
+  State next_state;
+  reg [15:0] roll,pitch,yaw;
+  
+  assign state = curr_state;
+  assign n_state = next_state;
+  
+  assign roll_angle_out = roll;
+  //assign roll_angle_out[15] = roll_sign;
+  assign pitch_angle_out = pitch;
+  //assign pitch_angle_out[15] = pitch_sign;
+  assign yaw_angle_out = yaw;
+  //assign yaw_angle_out[15] = yaw_sign;
+  
+  /*assign roll_angle_out[14:0] = roll_angle[14:0];
+  assign roll_angle_out[15] = roll_sign;
+  assign pitch_angle_out[14:0] = pitch_angle[14:0];
+  assign pitch_angle_out[15] = pitch_sign;
+  assign yaw_angle_out[14:0] = yaw_angle[14:0] + declination_in[14:0];
+  assign yaw_angle_out[15] = yaw_sign;*/
+  
+  assign data_done_out = data_done;
+  assign acc_y_square = acc_y_mag * acc_y_mag;
+  assign acc_z_square = acc_z_mag * acc_z_mag;
+  assign square_sum = acc_y_square + acc_z_square;
+  assign acc_x_neg = (2**16-1)^acc_x + 1;
+  assign acc_y_mag = acc_y[15] ? ((2**16-1)^acc_y+1):acc_y;
+  assign acc_z_mag = acc_z[15] ? ((2**16-1)^acc_z+1):acc_z;
+   
+  //assign arctan_x1 = (~acc_x) + 1'b1;
+  //assign acc_x_neg = -acc_x;
+  
+  always_comb begin
+    
+    /*if(roll_angle > 2**15 - 1)
+    begin
+     roll[15] = 1'b1;
+     roll[14:0] = 2**16 - roll_angle;
+    end 
+    else roll = roll_angle;
+      
+    if(pitch_angle > 2**15 - 1) begin
+     pitch[15] = 1'b1;
+     pitch[14:0] = 2**16 - pitch_angle;
+    end 
+    else pitch = pitch_angle;
+      
+    if(yaw_angle > 2**15 - 1) begin
+     yaw[15] = 1'b1;
+     yaw[14:0] = 2**16 - yaw_angle;
+    end 
+    else yaw = yaw_angle;*/
+    roll = {~roll_angle[15],roll_angle[14:0]};
+    pitch = {~pitch_angle[15],pitch_angle[14:0]};
+    yaw = {~yaw_angle[15],yaw_angle[14:0]};
+  end
+  
+  
+  //port map
+  Arctan ARCTAN(
+  .x_in(arctan_x),
+  .y_in(arctan_y),
+  .angle_out(arctan_out)
+  );
+  
+   Arctan ARCTAN1(
+  .x_in(acc_x_neg),
+  .y_in(sqrt_yz),
+  .angle_out(arctan_out1)
+  );
+  
+ /* Arctan ARCTAN2(
+  .x_in(mag_y),
+  .y_in(mag_x),
+  .angle_out(arctan_out2)
+  );*/
+  
+  sqrt SQRT(
+  .clk(clk),
+  .num_in(square_sum),
+  .num_out(sqrt_yz),
+  .dataready_out(sqrt_done)
+  );
+  
+  
+  always_ff @(posedge clk,negedge n_rst) begin
+    if(n_rst == 1'b0) begin
+      curr_state <= IDLE;
+      acc_x <= '0;
+      acc_y <= '0;
+      acc_z <= '0;
+      mag_x <= '0;
+      mag_y <= '0;
+      roll_angle <= '0;
+      pitch_angle <= '0;
+      yaw_angle <= '0;
+    end else begin
+      curr_state <= next_state;
+      acc_x <= acc_x0;
+      acc_y <= acc_y0;
+      acc_z <= acc_z0;
+      mag_x <= mag_x0;
+      mag_y <= mag_y0;
+      roll_angle <= roll_next;
+      pitch_angle <= pitch_next;
+      yaw_angle <= yaw_next;
+    end
+  end
+  
+  always_comb begin
+    next_state = curr_state;
+    acc_x0 = acc_x;
+    acc_y0 = acc_y;
+    acc_z0 = acc_z;
+    mag_x0 = mag_x;
+    mag_y0 = mag_y;
+    roll_next = roll_angle;
+    pitch_next = pitch_angle;
+    yaw_next = yaw_angle;
+    data_done = 1'b0;
+    
+    case(curr_state)
+      IDLE:
+      begin
+        if(load_acc_in == 1'b1) begin
+          next_state = LOAD_ACC;
+        end else if (load_mag_in == 1'b1) begin
+          next_state = LOAD_MAG;
+        end
+      end
+      LOAD_ACC:
+      begin
+        acc_x0 = acc_x_in;
+        acc_y0 = acc_y_in;
+        acc_z0 = acc_z_in;
+        next_state = CALC_SQRT;
+      end
+      LOAD_MAG:
+      begin
+        mag_x0 = mag_x_in;
+        mag_y0 = mag_y_in;
+        next_state = BUFF2;
+      end
+      CALC_SQRT:
+      begin
+        arctan_x = acc_y;
+        arctan_y = acc_z;
+        if(sqrt_done == 1'b1) next_state = BUFF1;
+      end
+      BUFF1:
+      begin 
+        roll_next = arctan_out;
+        pitch_next = arctan_out1;
+        next_state = OUTPUT;
+      end
+      BUFF2:
+      begin
+        arctan_x = mag_y;
+        arctan_y = mag_x;
+        next_state = BUFF3;
+      end
+      BUFF3:
+      begin
+        yaw_next = arctan_out; 
+        next_state = OUTPUT;
+      end
+      OUTPUT:
+      begin
+        data_done = 1'b1;
+        next_state = IDLE;
+      end 
+    endcase
+  end
+  
+endmodule

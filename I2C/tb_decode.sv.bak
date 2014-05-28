@@ -1,0 +1,200 @@
+// $Id: $
+// File name:   tb_decode.sv
+// Created:     3/7/2014
+// Author:      Yuhao Chen
+// Lab Section: 2
+// Version:     1.0  Initial Design Entry
+// Description: tb
+
+`timescale 1ns / 100ps
+
+module tb_decode();
+  
+  // Define clk parameter
+	parameter CLK_PERIOD				= 10;
+	parameter DATA_PERIOD = 300;
+	
+	//system clock
+	reg tb_clk;
+	
+	always
+	begin : CLK_GEN
+		tb_clk = 1'b0;
+		#(CLK_PERIOD / 2);
+		tb_clk = 1'b1;
+		#(CLK_PERIOD / 2);
+	end
+	
+	//scl clock
+	reg tb_scl;
+
+	
+	//tb variables
+	reg [3:0] tb_testcase;
+	
+	reg tb_n_rst;
+	reg tb_sda_in;
+	reg [7:0] tb_starting_byte;
+	wire tb_rw_mode;
+	wire tb_address_match;
+	wire tb_start_found;
+	wire tb_stop_found;
+		
+	//function call
+	decode DUT(.clk(tb_clk), .n_rst(tb_n_rst), .scl(tb_scl), .sda_in(tb_sda_in), .starting_byte(tb_starting_byte), .rw_mode(tb_rw_mode), .address_match(tb_address_match), .stop_found(tb_stop_found), .start_found(tb_start_found));
+		
+	//test bench process
+	initial
+	begin
+	  //reset
+	  tb_n_rst = 1'b0;
+	  
+	  #(CLK_PERIOD * 0.1);
+	  
+	  tb_n_rst = 1'b1;
+	  
+	  tb_testcase = 1;
+	  
+	  //case 1: testing address match and rw_mode for not match
+	  tb_starting_byte = 8'b00000000;
+	  //wait a bit
+	  #(CLK_PERIOD * 0.1);
+	  
+	  if (tb_rw_mode == 0)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! rw_mode", tb_testcase);
+	    end
+	    
+	  if (tb_address_match == 0)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! addr", tb_testcase);
+	    end 
+	    
+	    
+	  //case 2: testing address match and rw_mode for match
+	  tb_testcase = 2;
+	  tb_starting_byte = 8'b11110001;
+	  //wait a bit
+	  #(CLK_PERIOD * 0.1);
+	  
+	  if (tb_rw_mode == 1)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! rw_mode", tb_testcase);
+	    end
+	    
+	  if (tb_address_match == 1)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! addr", tb_testcase);
+	    end 
+	   
+	  //case 3: start found
+	  tb_testcase = 3;
+	  tb_n_rst = 1'b0;
+	  tb_scl = 1'b1;
+	  
+	  //to the middle of the clock period
+	  @(posedge tb_clk);
+	  #(CLK_PERIOD);
+	  tb_n_rst = 1'b1;
+	  
+	  //send data
+	  tb_sda_in = 1'b1;
+	  #(160 + CLK_PERIOD * 0.2); //hold time
+	  tb_sda_in = 1'b0;
+	  #(CLK_PERIOD * 2); // done AFTER 2 clk period
+	  	  
+	  if (tb_start_found == 1'b1 && tb_stop_found == 1'b0)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! startfound", tb_testcase);
+	    end
+	    
+	  #(160); //hold time
+	  tb_scl = 1'b0;
+	  
+	  
+	  //case 4: stop found
+	  //start at pos edge of scl clock
+	  tb_testcase = 4;
+	  @(posedge tb_scl);
+	  tb_scl = 1'b1;
+	  tb_sda_in = 1'b0;
+	  #(160); //hold time
+	  tb_sda_in = 1'b1;
+	  #(CLK_PERIOD * 2); // done AFTER 3 clk period
+	  	  
+	  if (tb_start_found == 1'b0 && tb_stop_found == 1'b1)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! stopfound", tb_testcase);
+	    end
+	  
+	  #(160);
+	  tb_scl = 1'b0;
+	  
+	  //case 5: scl low with start found
+	  tb_testcase = 5;
+	  tb_n_rst = 1'b0;
+	  tb_scl = 1'b0;
+	  
+	  //to the middle of the clock period
+	  @(posedge tb_clk);
+	  #(CLK_PERIOD);
+	  tb_n_rst = 1'b1;
+	  
+	  //send data
+	  tb_sda_in = 1'b1;
+	  #(160 + CLK_PERIOD * 0.2); //hold time
+	  tb_sda_in = 1'b0;
+	  #(CLK_PERIOD * 2); // done AFTER 2 clk period
+	  	  
+	  if (tb_start_found == 1'b0 && tb_stop_found == 1'b0)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail!", tb_testcase);
+	    end
+	    
+	  #(160); //hold time
+	  tb_scl = 1'b1;
+	  
+	  //case 6: no start or stop found
+	  tb_testcase = 6;
+	  #(CLK_PERIOD * 2); // done AFTER 2 clk period
+	  	  
+	  if (tb_start_found == 1'b0 && tb_stop_found == 1'b0)
+	    begin
+	      $info("test case %d pass!", tb_testcase);
+	    end
+	  else
+	    begin
+	      $error("test case %d fail! ", tb_testcase);
+	    end
+	end
+	
+	
+endmodule
